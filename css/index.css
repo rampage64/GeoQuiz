@@ -1,0 +1,280 @@
+/ 
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+	background: url(../img/backgroundQuiz.jpg); 
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+ 
+}
+ 
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/backgroundQuiz.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+       font-size: 20px;
+    font-weight: normal;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+    width: 175px;
+	margin-top: 15px;
+}
+ 
+.shtetet .list-group-item{
+    margin-left: 8px;
+    margin-top: 9.5px;
+    margin-right: 8px;
+    /* margin-bottom: 2.5px; */
+    /* height: 60px; */
+    font-size:1.3em;
+    color: #286090;
+    text-align: center;
+    border: 1px solid #000;
+}
+.list-group-item{
+    margin-left: 8px;
+    margin-top: 9.5px;
+    margin-right: 8px;
+    /* margin-bottom: 2.5px; */
+    /* height: 60px; */
+    font-size:1.3em;
+    color: orange;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#main {  
+    margin: 0 auto;
+    width: 100%;
+}
+#rez_main {  
+    margin: 0 auto;   
+	width: 100%;
+}
+
+#country_main {   
+     margin-top: 5%;
+    height: 100%;
+    width: 100%;
+} 
+
+#mbajtesi { 
+    margin-top: 10%;
+    width: 75%;
+}
+#rez_mbajtesi {
+    margin-left: -3%;
+    margin-top: 10%;
+}
+#rez_main img{    
+ margin-left: 25%;
+    margin-top: 0%;
+    background-size: cover;
+    width: 175px;
+    height: 200px;
+	    border: 4px solid orangered;
+}
+
+  #rez_cont  { 
+    margin-top: 10%;  
+    width:100%;
+  } 
+  
+#main img{    
+       margin-left: 10px;
+    margin-top: 5%;
+    background-size: cover;
+        width: 75px;
+}
+  
+  #header {
+     display: inline-block;
+    width: 100%;
+  }
+  
+  #header_poenat { 
+    float: right;
+    width: 25%;
+    position: inherit;
+    text-align: center;
+  }
+   #header_img { 
+    float: left;
+    width: 50%;
+    position: inherit;
+  } 
+
+  #header_img h3{ 
+    float: right;
+    width: 20%;
+    position: inherit;
+  }
+  #Menyja {
+   margin-left: 2%;
+    margin-top: 10%;
+    width: 75%;
+  }
+   
+    footer {
+      margin-left: 15%;   
+	  margin-top: 5%;
+    width: 75%;
+    bottom: 0px;
+    text-align: center;
+  }
+  
+  #cont  { 
+    margin-top: 10%;  
+    width:75%;
+  }
+#loja_cont  { 
+    margin-top: 10px; 
+    background-color: #fff;
+    height: 80px;
+  }
+  #loja_cont h3,p { 
+     text-align: center;
+    vertical-align: center; 
+  }
+ 
+#questions { 
+margin: 0 auto;
+} 
+ 
+ #lista_loja {
+    font-size: 10pt;
+    margin-top: 20px; 
+    height: 0px;
+    WIDTH: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10%;
+ }
+ 
+  #lista_shtetet {
+    font-size: 10pt;
+    margin-top: 20px;
+    overflow: auto;
+    height: 0px;
+    WIDTH: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10%;
+ }
+ 
+#answers { 
+margin: 0 Auto; 
+Height:20%;
+Width:100%;
+margin-top:25px;
+}
+
+input[type="radio"] {
+font-size:26pt;
+}
+
+#pyetja {
+font-size:28pt;
+}
+  
+#mesazhi { 
+margin-top:20px;
+margin-left:20px;
+margin-right:20px;
+font-size:12pt;
+  }
+  
+  .btn {
+    white-space: normal;
+	width:200px;
+	height:50px;
+	margin-top:8px;   
+	margin-left: 25%;
+	font-size:14pt;
+}
+  
+    #mesazhigabim {
+margin-top:20px;
+margin-left:20px;
+margin-right:20px;
+font-size:12pt;
+  }
